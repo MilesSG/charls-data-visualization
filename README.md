@@ -10,6 +10,7 @@
 
 中国健康与养老追踪调查(CHARLS)数据可视化系统是一个基于Streamlit的交互式数据可视化平台，用于展示和管理CHARLS调查数据，包含多维度健康指标分析、问卷管理功能和系统功能模块。
 
+### 📸 系统截图
 ![image](https://github.com/user-attachments/assets/94289931-2308-4896-8177-1a16c18fa768)
 
 ### ✨ 主要特性
@@ -157,6 +158,6 @@ streamlit run app.py
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-### ��‍💻 Author
+### 👨‍💻 Author
 
-MilesSG 
+MilesSG
