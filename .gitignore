@@ -36,4 +36,5 @@ ENV/
 
 # Project specific
 data/*.json
-!data/.gitkeep 
+!data/.gitkeep
+charls-data-visualization/ 
