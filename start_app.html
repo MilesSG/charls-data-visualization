@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHARLS数据可视化系统启动器</title>
+    <style>
+        body {
+            font-family: 'Microsoft YaHei', Arial, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #333;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            text-align: center;
+            width: 80%;
+            max-width: 600px;
+        }
+        h1 {
+            color: #0066cc;
+            margin-bottom: 20px;
+        }
+        .description {
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+        .button {
+            display: inline-block;
+            background: #0066cc;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            margin: 10px;
+        }
+        .button:hover {
+            background: #0055aa;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 102, 204, 0.3);
+        }
+        .status {
+            margin-top: 20px;
+            font-style: italic;
+            color: #666;
+        }
+        .features {
+            text-align: left;
+            margin-top: 30px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.6);
+            border-radius: 10px;
+        }
+        .features ul {
+            padding-left: 20px;
+        }
+        .features li {
+            margin-bottom: 6px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🏥 CHARLS数据可视化系统</h1>
+        <div class="description">
+            <p>中国健康与养老追踪调查(CHARLS)数据可视化系统是一个交互式可视化平台，用于展示和管理CHARLS调查数据。</p>
+        </div>
+        
+        <a href="javascript:void(0)" onclick="startApp()" class="button">启动系统</a>
+        
+        <div id="status" class="status">准备就绪，点击启动按钮开始运行...</div>
+        
+        <div class="features">
+            <h3>系统功能</h3>
+            <ul>
+                <li>多维度健康指标数据可视化</li>
+                <li>问卷管理系统</li>
+                <li>系统功能模块管理</li>
+                <li>关键指标概览</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function startApp() {
+            document.getElementById('status').innerHTML = "正在启动系统，请稍候...";
+            
+            // 使用ActiveXObject在Windows系统上运行批处理文件
+            try {
+                var shell = new ActiveXObject("WScript.Shell");
+                shell.Run("start_app.bat", 1, false);
+                document.getElementById('status').innerHTML = "系统已启动！请查看浏览器中打开的新标签页。";
+            } catch (e) {
+                document.getElementById('status').innerHTML = "无法自动启动系统，请直接双击运行start_app.bat文件。";
+                alert("无法通过浏览器自动启动系统，请直接双击运行start_app.bat文件。");
+            }
+        }
+    </script>
+</body>
+</html> 

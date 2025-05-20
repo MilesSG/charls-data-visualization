@@ -637,7 +637,16 @@ try:
         edu_pie.add(
             series_name="教育水平",
             data_pair=edu_data,
-            radius=["35%", "70%"]
+            radius=["30%", "60%"],
+            label_opts=opts.LabelOpts(
+                formatter="{b}\n{c}%",
+                position="outside",
+                font_size=10,
+                font_style="normal"
+            )
+        )
+        edu_pie.set_global_opts(
+            legend_opts=opts.LegendOpts(orient="vertical", pos_right="0%", pos_top="middle")
         )
         edu_pie.set_colors(["#0066cc", "#30b0c7", "#5ac8c8", "#7bd2be", "#98ddb6"])
         st_pyecharts(edu_pie, height="400px")
@@ -658,7 +667,16 @@ try:
         income_pie.add(
             series_name="年收入水平",
             data_pair=income_data,
-            radius=["35%", "70%"]
+            radius=["30%", "60%"],
+            label_opts=opts.LabelOpts(
+                formatter="{b}\n{c}%",
+                position="outside",
+                font_size=10,
+                font_style="normal"
+            )
+        )
+        income_pie.set_global_opts(
+            legend_opts=opts.LegendOpts(orient="vertical", pos_right="0%", pos_top="middle")
         )
         income_pie.set_colors(["#0066cc", "#1a8cff", "#30b0c7", "#5ac8c8", "#7bd2be"])
         st_pyecharts(income_pie, height="400px")
@@ -684,7 +702,16 @@ try:
         pie.add(
             series_name="医疗保险覆盖率",
             data_pair=insurance_data,
-            radius=["35%", "70%"]
+            radius=["30%", "60%"],
+            label_opts=opts.LabelOpts(
+                formatter="{b}\n{c}%",
+                position="outside",
+                font_size=10,
+                font_style="normal"
+            )
+        )
+        pie.set_global_opts(
+            legend_opts=opts.LegendOpts(orient="vertical", pos_right="0%", pos_top="middle")
         )
         pie.set_colors(["#0066cc", "#1a8cff", "#30b0c7", "#45b4c7", "#5ac8c8", "#6fccc8", "#85d0c8"])
         st_pyecharts(pie, height="400px")
